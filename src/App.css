@@ -1,3 +1,28 @@
+@font-face {
+    font-family:'staat' ;
+    src: url(/public/Staatliches/Staatliches-Regular.ttf);
+}
+@font-face {
+  font-family: "spline";
+  src: url(/public/Spline_Sans_Mono/SplineSansMono-VariableFont_wght.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Vertical scrollbar width */
+    height: 0; /* Horizontal scrollbar height */
+}
+
+body {
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on touch devices */
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +60,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+body{
+  background-color: black;
+  color: white;
+}
+
+.temp{
+  font-size: 5em ;
+  height: 100vh;
+}
+
+.borderTemp{
+  position: absolute;
+  border: 2px solid black;
+  width: 100vw;
+  height: 100vh;
+}
+
+.canvas_container{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: -1;
 }
