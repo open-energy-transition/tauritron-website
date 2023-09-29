@@ -1,7 +1,6 @@
 import "./CanvasButton.css";
 import { Canvas } from "@react-three/fiber";
 import { Stage, OrbitControls } from "@react-three/drei";
-import RotateObject from "./RotateObject";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { GrGithub, GrDeploy } from "react-icons/gr";
