@@ -1,7 +1,5 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { forwardRef, useLayoutEffect, useRef } from "react";
 import "./CanvasButton.css";
-import CanvasButton from "./CanvasButton";
-import { useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -26,14 +24,15 @@ const ButtonsData = {
       "with viz-platform, streamline analysis and decision-making",
     ],
     github_link: "https://github.com/pypsa-meets-earth/pypsa-earth-lit",
-    deploy_link: "https://tauritron.com/",
+    deploy_link: "https://pypsa-earth-dashboard.com/",
     documentation_link: "https://main--comforting-madeleine-30be5f.netlify.app",
   },
 };
 
-const ButtonsContainer = () => {
-  const main_container_ref = useRef();
+const ButtonsContainer = forwardRef(function ButtonsContainer(props, ref) {
   const once = useRef(true);
+  const vizLinkRef = useRef();
+  const computeLinkRef = useRef();
 
   useLayoutEffect(() => {
     if (once.current) {
@@ -44,7 +43,7 @@ const ButtonsContainer = () => {
           color: "white",
           overwrite: "auto",
         }),
-        trigger: main_container_ref.current,
+        trigger: ref.current,
         start: "0 90%",
         end: "0 0",
         scrub: 2,
@@ -53,14 +52,64 @@ const ButtonsContainer = () => {
   }, []);
 
   return (
-    <div className="button_Container" ref={main_container_ref}>
-      <CanvasButton text={"Viz Platform"} buttonData={ButtonsData.viz} />
-      <CanvasButton
-        text={"Compute Platform"}
-        buttonData={ButtonsData.compute}
-      />
+    <div className="button_Container" ref={ref}>
+      <div
+        className="main_btn"
+        id="viz_btn"
+        onClick={() => {
+          console.log("clicked");
+          vizLinkRef.current.click();
+        }}
+      >
+        <div className="before_container">
+          <h1 className="main_text_card">{ButtonsData.viz.heading}</h1>
+          <ul className="subtext_card">
+            {ButtonsData.viz.features_array.map((feature) => {
+              return <li key={feature[2]}>{feature}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="my_pointer">
+          <a
+            href={ButtonsData.viz.github_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            ref={vizLinkRef}
+          >
+            <p>placeholder</p>
+          </a>
+        </div>
+      </div>
+      {/*  */}
+      <div
+        className="main_btn"
+        id="compute_btn"
+        onClick={() => {
+          console.log("clicked");
+          computeLinkRef.current.click();
+        }}
+      >
+        <div className="before_container">
+          <h1 className="main_text_card">{ButtonsData.compute.heading}</h1>
+          <ul className="subtext_card">
+            {ButtonsData.compute.features_array.map((feature) => {
+              return <li key={feature[2]}>{feature}</li>;
+            })}
+          </ul>
+        </div>
+        <div className="my_pointer">
+          <a
+            href={ButtonsData.compute.deploy_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            ref={computeLinkRef}
+          >
+            <p>placeholder</p>
+          </a>
+        </div>
+      </div>
     </div>
   );
-};
+});
 
 export default ButtonsContainer;

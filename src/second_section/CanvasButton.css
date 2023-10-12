@@ -12,6 +12,13 @@
     position: relative;
 }
 
+#viz_btn{
+    cursor: url(/public/github.png),auto;
+}
+#compute_btn{
+    cursor: url(/public/platform.png),auto;
+}
+
 .before_container{
     position: absolute;
     display: flex;
@@ -37,43 +44,10 @@
     margin-top: 2rem;
 }
 
-.after_container{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background: linear-gradient( rgba(141,141,142,1) 0%, rgba(0,0,0,1) 100%);
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-}
-
-.after_container a{
-    color: white;
-    text-decoration: none;
-}
-
-.list_element{
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-    cursor: default; /* Set the default cursor for non-hovered state */
-    transition: transform 0.2s ease; /* Smooth transformation transition */
-}
-
-.list_element:hover {
-    cursor: pointer; /* Change cursor to a pointer on hover */
-    color: #ff9f1c;
-    transform: scale(1.25); /* Scale the div to 1.25 its original size on hover */
-}
-
-
 /*  */
 .button_Container{
+    max-width: 100%;
+    overflow: hidden;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -81,4 +55,8 @@
     justify-content: center;
     gap: 5vw;
     align-items: center;
+}
+
+.my_pointer{
+  display: none;
 }

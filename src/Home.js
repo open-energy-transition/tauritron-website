@@ -1,9 +1,9 @@
 import React from "react";
 import "./Home.css";
-import CanvasButton from "./second_section/CanvasButton";
 import img_bull from "./bull.png";
+import { BiSolidChevronsDown } from "react-icons/bi";
 
-const Home = () => {
+const Home = ({ secondSectionRef }) => {
   return (
     <div className="container_home">
       <div>
@@ -26,6 +26,14 @@ const Home = () => {
           <li>Steadily evolving</li>
         </ul>
       </div>
+      <BiSolidChevronsDown
+        className="scroll_down"
+        onClick={() => {
+          if (secondSectionRef.current) {
+            secondSectionRef.current.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+      />
     </div>
   );
 };

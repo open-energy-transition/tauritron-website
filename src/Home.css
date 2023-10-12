@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    width: 100vw;
-    padding: 20px;
+    max-width: 100%;
+    /* padding: 20px; */
     box-sizing: border-box;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -76,6 +77,24 @@
   padding: 5px 0;
   margin-bottom: 2vh;
 }
+
+.scroll_down{
+    height: 10vh;
+    width: 10vw;
+    color: #ff8001;
+    margin-top: 4vh;
+    margin-bottom: 1.5vh;
+    transition: transform 0.3s ease; /* Smooth transformation transition */
+
+}
+.scroll_down:hover{
+    cursor: pointer;
+    transform: scale(1.5) translateY(1vh);  
+    transition: 0.5s;
+    color: #ff9f1c;
+
+}
+
 
 @media (max-width: 600px) {
   .features_container li {
