@@ -1,3 +1,20 @@
+.button_Container{
+    max-width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vw;
+    align-items: center;
+}
+@media (max-width: 767px) {
+    .button_Container {
+        flex-direction: column;
+    }
+}
+
 .main_btn{
     width: 40vw;
     height: 70vh;
@@ -11,6 +28,13 @@
     overflow: hidden;
     position: relative;
 }
+@media (max-width: 767px) {
+    .main_btn {
+        width: 90vw;
+        height: 40vh;
+    }
+}
+
 
 #viz_btn{
     cursor: url(/public/github.png),auto;
@@ -29,15 +53,33 @@
     z-index: 2;
     opacity: 1;
 }
+
 .main_text_card{
     font-size: 3vw;
     margin: 2rem;
     font-weight: 600;
 }
+
+@media (max-width: 767px) {
+    .main_text_card {
+        font-size: 7vw;
+        margin: 1rem;
+        font-weight: 500;
+    }
+}
+
+
 .subtext_card{
     font-weight: 300;
     font-size: 2vw;
     margin: 1.5rem;
+}
+@media (max-width: 767px) {
+    .subtext_card {
+        font-weight: 200;
+        font-size: 4.5vw;
+        margin: 1rem;
+    }
 }
 
 .subtext_card li{
@@ -45,17 +87,6 @@
 }
 
 /*  */
-.button_Container{
-    max-width: 100%;
-    overflow: hidden;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 5vw;
-    align-items: center;
-}
 
 .my_pointer{
   display: none;
