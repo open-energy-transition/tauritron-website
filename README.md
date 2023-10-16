@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Tauritron
+<!-- An open-source web interface for running worldwide energy system planning studies -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="public/logo-capital-english.png" width="300">
 
-## Available Scripts
+## New packages
+- PyPSA-lit - An interactive visualization platform for exploring energy systems: [code](https://github.com/pypsa-meets-earth/pypsa-earth-lit) and [docs](https://github.com/pypsa-meets-earth/pypsa-lit-docs) 
+- PyPSA-engine - A compute platform for optimizing large optimization problems: [Kubernetes workflow code](https://github.com/open-energy-transition/pypsa-workflow), [back-end code](https://github.com/open-energy-transition/pypsa-cloud-dashbord-express), [front-end code](https://github.com/open-energy-transition/pypsa-cloud-dashbord-react)
 
-In the project directory, you can run:
+## Short project description
+The open source project puts the human back at the center of energy planning decisions. This project will improve how people interact with energy data, enable simple calculations and visualizations, promote public engagement, and improve human-centered decision making. Specifically, the project aims to develop a graphical web interface for the popular open-source energy system model, PyPSA, which is used in research and industry worldwide. After successful development, the open-source developments can be adapted by any other tool.
 
-### `npm start`
+## What societal challenges we want to address?
+Achieving net zero emissions requires advanced modeling capabilities to capture the complex interactions between electricity, gas, and heat. With the insights of such modeling tools, various technical, policy, and regulatory decisions are currently being made. The market for such modeling tools is currently dominated by expensive and opaque "black-box" solutions that are heavily criticized in academia and industry as well as exclude citizens and other stakeholders in the decision-making process. While a number of open-source energy models with increased complexity have been recently developed to support sustainable and cost-effective decision-making, a common shortcoming is the lack of consideration of the ability of humans to understand and question the complicated results. Open-source tools are currently not user-friendly and failing to address these issues can lead to poor decisions, misunderstandings, and trust issues in the energy policy arena. A solution is particularly urgent given the current energy crisis and skyrocketing electricity bills.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical implementation plan:
+The webinterface will be developed on a stable version of PyPSA-Earth. The model developed in 2022 is the first of its kind to use rich spatial and temporal data to create representative energy systems around the world for transparent energy system planning. The graphical user interface should allow modification of option files via a front end, execution of large-scale optimizations in the cloud, and summaries and explorations of results. A plug-in architecture should allow to build purpose-driven and report-ready statistics, visuzalizations and figures. For the complex optimization, HiGHS will be integrated as the world's fastest solver, D3.js for graphics, Mapbox, Leaflet and Natural Earth for maps, Plotly, Matplotlib, Xarray for output plots, Holoviews for interactive exploration of results and free software for server infrastructure (GNU/Linux, nginx, Flask, Gunicorn, Redis) were used.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **01.03.2023 Project start.** Test existing EU front-end project to design detailed plan for global model integration and improvements. Exchange with stakeholders/users like Agora Energiewende and Transition Zero and users from the global south. Goal is to clearly define the requirements and to build an exchange partner for the development
+- **01.04.2023 Development start.**
+- **01.05.2023 Alpha version presentation.** Model is integrated into a front-end, architecture is clear and visible.
+- **01.06.2023 Beta version presentation.** Design, viz-art and functions are improved.
+- **01.08.2023 Demo day preparation.** Live version should be ready. Documentation is perfected.
+- **01.09.2023 Demo day presentation.**
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Sponsor
+Sponsored by BMBF through the [Prototypefund 2023 round 13](https://prototypefund.de/project/tauritron/).
+<br>
+<img src="https://github.com/pypsa-meets-earth/tauritron/assets/61968949/e1563dc7-884d-4cae-ba48-70d57ab12774" width="300" align="left">
