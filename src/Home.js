@@ -12,20 +12,8 @@ const Home = ({ secondSectionRef }) => {
       <h1 className="main_heading">Tauritron</h1>
       <p className="subHeading">
         An open source web interface for running worldwide energy system
-        planning.
+        planning demo.
       </p>
-      <div className="features_container">
-        <ul>
-          <li>Easy-to-use interface</li>
-          <li>Intuitive report-ready visualization and stats</li>
-          <li>Flexible model customization</li>
-          <li>Developed for large scale optimization</li>
-          <li>Multi-cloud and solver integrations</li>
-          <li>Powerful simulation and optimization capabilities</li>
-          <li>Real-time collaboration tools</li>
-          <li>Steadily evolving</li>
-        </ul>
-      </div>
       <BiSolidChevronsDown
         className="scroll_down"
         onClick={() => {
