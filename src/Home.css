@@ -11,7 +11,7 @@
 }
 
 .main_heading {
-    font-size: 12em;
+    font-size: 10em;
     color: #ff8000;
     font-family: staat;
     margin-bottom: 20px;
@@ -19,7 +19,7 @@
 }
 @media (max-width: 767px) {
     .main_heading {
-      font-size: 5.2em;
+      font-size: 4.8em;
       margin-bottom: 10px;
     }
 }
@@ -29,64 +29,23 @@
     color: #fff;
     font-family: spline;
     margin-bottom: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     /* margin-top: 5rem; */
 }
 @media (max-width: 767px) {
     .subHeading {
       font-size: 1.3em;
       margin-bottom: 0px;
+      margin-left: 0rem;
+    margin-right: 0rem;
     }
 }
 .icon_image{
-    height: 10vh;
-    width: 20vw;
+    height: 20vh;
+    width: 40vw;
     object-fit: contain;
     display: block;
-}
-
-
-.features_container {
-  height: 100%;
-  margin-top: 7vh;
-  color: #fff;
-  font-family: spline;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-@media (max-width: 767px) {
-    .features_container {
-      margin-left: 4px;
-      margin-right: 4px;
-    }
-}
-
-.features_container ul {
-  list-style-type: none; 
-  padding: 0; /* Removes default padding */
-  display: flex;
-  flex-wrap: wrap; /* Allows for wrapping */
-  justify-content: space-between; /* Space between the columns */
-  margin: 0; /* Removes default margin */
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-.features_container li {
-  width: calc(50% - 10px); 
-  box-sizing: border-box; 
-  padding: 5px 0;
-  margin-bottom: 2vh;
-}
-
-@media (max-width: 767px) {
-    .features_container ul {
-        font-size: 1rem;
-    }
 }
 
 
@@ -116,4 +75,6 @@
     }
 }
 
-  
+
+
+/* CSS */
