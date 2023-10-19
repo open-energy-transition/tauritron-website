@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node.js (NPM)
         uses: actions/setup-node@master
         with:
-          node-version: '12.x'
+          node-version: '18.x'
 
       - name: Use cached node_modules
         uses: actions/cache@master
