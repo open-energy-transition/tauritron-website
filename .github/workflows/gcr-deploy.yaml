@@ -16,15 +16,15 @@ jobs:
 
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v3
 
       - name: Setup Node.js (NPM)
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v3
         with:
-          node-version: '18.12.1'
+          node-version: 18
 
       - name: Install dependencies
-        run: npm i
+        run: npm ci
         env:
           CI: false 
 
