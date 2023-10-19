@@ -31,13 +31,13 @@ jobs:
           restore-keys: |
             nodeModules-
       - name: Install dependencies
-        run: npm ci
+        run: npm i
         env:
           CI: true
 
       - name: Build Development
         run: npm run build
-        
+
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
         with:
