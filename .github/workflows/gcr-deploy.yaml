@@ -21,15 +21,8 @@ jobs:
       - name: Setup Node.js (NPM)
         uses: actions/setup-node@master
         with:
-          node-version: '18.x'
+          node-version: '18.12.1'
 
-      - name: Use cached node_modules
-        uses: actions/cache@master
-        with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            nodeModules-
       - name: Install dependencies
         run: npm i
         env:
