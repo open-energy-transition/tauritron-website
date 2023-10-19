@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: npm i
         env:
-          CI: true
+          CI: false 
 
       - name: Build Development
         run: npm run build
