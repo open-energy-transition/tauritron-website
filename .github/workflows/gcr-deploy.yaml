@@ -30,6 +30,9 @@ jobs:
         run: npm install
         env:
           CI: false 
+          
+      - name: Unset CI
+        run : unset CI 
 
       - name: Build Development
         run: npm run build
