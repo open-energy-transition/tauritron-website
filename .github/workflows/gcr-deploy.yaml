@@ -9,6 +9,8 @@ env:
   PROJECT_ID: ${{ secrets.GCR_PROJECT }}
   RUN_REGION: asia-southeast1
   SERVICE_NAME: tauritron-website-github
+
+
 jobs:
   build:
     name: Build React App
@@ -60,9 +62,9 @@ jobs:
 
       - name: Setup GCloud Auth
         id: auth
-        uses: google-github-actions/auth@v0.4.0
+        uses: 'google-github-actions/auth@v0'
         with:
-          credentials_json: ${{ inputs.GCR_SA_KEY }}
+          credentials_json: '${{ secrets.GCR_SA_KEY }}'
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.1
