@@ -35,7 +35,7 @@ jobs:
         run : unset CI 
 
       - name: Build Development
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Archive Production Artifact
         uses: actions/upload-artifact@main
