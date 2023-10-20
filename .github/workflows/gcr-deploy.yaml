@@ -30,12 +30,7 @@ jobs:
       
       - name: Install dependencies
         run: npm install
-        env:
-          CI: false 
-          
-      - name: Unset CI
-        run : unset CI 
-
+        
       - name: Build Development
         run: CI=false npm run build
 
