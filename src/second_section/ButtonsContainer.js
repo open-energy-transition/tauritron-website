@@ -14,8 +14,8 @@ const ButtonsData = {
       // "Python-Powered Visualization with Streamlit",
       "Dynamic Visualization of PyPSA Earth Models",
     ],
-    github_link: "https://github.com/pypsa-meets-earth/pypsa-earth-lit",
-    deploy_link: "https://tauritron.com/",
+    github_link: "https://github.com/open-energy-transition/tauritron-website",
+    deploy_link: "https://viz.tauritron.com/",
     documentation_link: "https://main--comforting-madeleine-30be5f.netlify.app",
   },
   compute: {
@@ -25,7 +25,7 @@ const ButtonsData = {
       // "Securely pay for compute and store solved models for free",
       // "with viz-platform, streamline analysis and decision-making",
     ],
-    github_link: "https://github.com/pypsa-meets-earth/pypsa-earth-lit",
+    github_link: "https://github.com/open-energy-transition/tauritron-website",
     deploy_link: "https://pypsa-earth-dashboard.com/",
     documentation_link: "https://main--comforting-madeleine-30be5f.netlify.app",
   },
@@ -33,8 +33,10 @@ const ButtonsData = {
 
 const ButtonsContainer = forwardRef(function ButtonsContainer(props, ref) {
   const once = useRef(true);
-  const computeRef = useRef();
-  const vizRef = useRef();
+  const computePlatformRef = useRef();
+  const computeGitRef = useRef();
+  const vizGitRef = useRef();
+  const vizPlatformRef = useRef();
 
   useLayoutEffect(() => {
     if (once.current) {
@@ -61,25 +63,49 @@ const ButtonsContainer = forwardRef(function ButtonsContainer(props, ref) {
           {ButtonsData.viz.features_array.map((feature) => {
             return <p className="subtext_card"> {feature} </p>;
           })}
-          <button
-            className="my-btn"
-            role="button"
-            onClick={() => {
-              vizRef.current.click();
-            }}
-          >
-            {/* <img src={gitLogo} className="btn-img" /> */}
-            Github
-          </button>
-          <div className="my_pointer">
-            <a
-              href={ButtonsData.viz.github_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              ref={vizRef}
+          <div className="compute_button">
+            {/* github button */}
+            <button
+              className="my-btn"
+              role="button"
+              onClick={() => {
+                vizGitRef.current.click();
+              }}
             >
-              <p>placeholder</p>
-            </a>
+              {/* <img src={gitLogo} className="btn-img" /> */}
+              Github
+            </button>
+            <div className="my_pointer">
+              <a
+                href={ButtonsData.viz.github_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={vizGitRef}
+              >
+                <p>placeholder</p>
+              </a>
+            </div>
+            {/* platform button */}
+            <button
+              className="my-btn"
+              role="button"
+              onClick={() => {
+                vizPlatformRef.current.click();
+              }}
+            >
+              {/* <img src={gitLogo} className="btn-img" /> */}
+              Platform
+            </button>
+            <div className="my_pointer">
+              <a
+                href={ButtonsData.viz.deploy_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={vizPlatformRef}
+              >
+                <p>placeholder</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -89,25 +115,49 @@ const ButtonsContainer = forwardRef(function ButtonsContainer(props, ref) {
           {ButtonsData.compute.features_array.map((feature) => {
             return <p className="subtext_card"> {feature} </p>;
           })}
-          <button
-            class="my-btn"
-            role="button"
-            onClick={() => {
-              computeRef.current.click();
-            }}
-          >
-            {/* <img src={deployLogo} className="btn-img" /> */}
-            Platform
-          </button>
-          <div className="my_pointer">
-            <a
-              href={ButtonsData.compute.deploy_link}
-              target="_blank"
-              rel="noopener noreferrer"
-              ref={computeRef}
+          <div className="compute_button">
+            {/* github button */}
+            <button
+              class="my-btn"
+              role="button"
+              onClick={() => {
+                computeGitRef.current.click();
+              }}
             >
-              <p>placeholder</p>
-            </a>
+              {/* <img src={deployLogo} className="btn-img" /> */}
+              Github
+            </button>
+            <div className="my_pointer">
+              <a
+                href={ButtonsData.compute.github_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={computeGitRef}
+              >
+                <p>placeholder</p>
+              </a>
+            </div>
+            {/* platform button */}
+            <button
+              class="my-btn"
+              role="button"
+              onClick={() => {
+                computePlatformRef.current.click();
+              }}
+            >
+              {/* <img src={deployLogo} className="btn-img" /> */}
+              Platform
+            </button>
+            <div className="my_pointer">
+              <a
+                href={ButtonsData.compute.deploy_link}
+                target="_blank"
+                rel="noopener noreferrer"
+                ref={computePlatformRef}
+              >
+                <p>placeholder</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
