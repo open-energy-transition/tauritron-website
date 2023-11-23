@@ -4,7 +4,7 @@
 <img src="public/logo-capital-english.png" width="300">
 
 ## New packages
-- PyPSA-lit - An interactive visualization platform for exploring energy systems: [code](https://github.com/pypsa-meets-earth/pypsa-earth-lit) and [docs](https://github.com/pypsa-meets-earth/pypsa-lit-docs) 
+- PyPSA-lit - An interactive visualization platform for exploring energy systems: [code](https://github.com/pypsa-meets-earth/pypsa-earth-lit) and [docs](https://docs.viz.tauritron.com/) 
 - PyPSA-engine - A compute platform for optimizing large optimization problems: [Kubernetes workflow code](https://github.com/open-energy-transition/pypsa-workflow), [back-end code](https://github.com/open-energy-transition/pypsa-cloud-dashbord-express), [front-end code](https://github.com/open-energy-transition/pypsa-cloud-dashbord-react)
 
 ## Short project description
