@@ -1,9 +1,15 @@
 name: Google Cloud Run Deploy
 # https://github.com/google-github-actions/setup-gcloud
-on:
-  push:
-    branches:
-      - master
+
+# TODO: Re-enable this workflow by uncommenting the 'on:' trigger below
+# Workflow is temporarily disabled - uncomment to re-enable automatic deploys on push to master
+# on:
+#   push:
+#     branches:
+#       - master
+
+# Temporary: workflow disabled, no triggers will fire
+on: []
 
 env:
   PROJECT_ID: ${{ secrets.GCR_PROJECT }}
